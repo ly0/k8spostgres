@@ -2,7 +2,7 @@
 FROM debian:jessie
 
 # explicitly set user/group IDs
-RUN groupadd -r postgres --gid=1000 && useradd -r -g postgres --uid=1000 postgres
+RUN groupadd -r postgres && useradd -r -g postgres postgres
 
 # grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.7
